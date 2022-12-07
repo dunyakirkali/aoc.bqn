@@ -1,15 +1,6 @@
-input ← ⟨"vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg", "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", "ttgJtRGJQctTZtZT", "CrZsJsPPZsGzwwsLwLmpwMDw"⟩
+l ← {m←𝕩≥'a' ⋄ 1+(26×¬m)+𝕩-m⊏"Aa"}¨ •FLines ≠◶"./2022/day3/input.txt"‿⊑ •args
+s←⥊"aA"+⌜↕26
+i↩1+s⊸⊐¨i
 
-Convert ← 97⊸≤◶⟨-⟜96, -⟜38⟩¨
-Window ← (⌊∘÷˜⟜(↕≠)⊔⊢) 
-
-# Part 2
-data ← 3 Window Convert¨ input
-
-# ⍷∾
-(∊/⊣)´¨data
-
-⟨2, 3, 4⟩(∊/⊣)⟨1, 2, 3⟩
-
-
-+´⟨1, 2, 3⟩
+•Show +´ {⋈⁼⍷(∊/⊣)´𝕩}¨ {<˘2‿∘⥊𝕩}¨ l
+•Show +´ {⋈⁼⍷(∊/⊣)´𝕩}¨  <˘∘‿3⥊    l
